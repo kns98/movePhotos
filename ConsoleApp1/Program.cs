@@ -46,12 +46,12 @@ namespace MovePics
         public static void RenameAll(string[] args)
         {
             List<FileInfo> files1 = new List<FileInfo>();
-            DirSearch_ex3_Rename("d:\\OneDrive\\Pictures", files1);
+            DirSearch_ex3_Rename("d:\\OneDrive\\Pictures\\by_date", files1);
 
             RunPass(files1, Guid.NewGuid().ToString());
 
             List<FileInfo> files2 = new List<FileInfo>();
-            DirSearch_ex3_Rename("d:\\OneDrive\\Pictures", files2);
+            DirSearch_ex3_Rename("d:\\OneDrive\\Pictures\\by_date", files2);
             RunPass(files2, "");
 
 
