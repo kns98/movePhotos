@@ -12,8 +12,11 @@ using File = System.IO.File;
 
 namespace MovePics
 {
+    
     class Program
     {
+        static readonly string folder = @"D:\OneDrive\Pictures\\by_date";
+
         static void RunPass(List<FileInfo> files, string prefix)
         {
             for (int i = 0; i < files.Count; i++)
@@ -46,12 +49,12 @@ namespace MovePics
         public static void RenameAll(string[] args)
         {
             List<FileInfo> files1 = new List<FileInfo>();
-            DirSearch_ex3_Rename("d:\\OneDrive\\Pictures\\by_date", files1);
+            DirSearch_ex3_Rename(folder, files1);
 
             RunPass(files1, Guid.NewGuid().ToString());
 
             List<FileInfo> files2 = new List<FileInfo>();
-            DirSearch_ex3_Rename("d:\\OneDrive\\Pictures\\by_date", files2);
+            DirSearch_ex3_Rename(folder, files2);
             RunPass(files2, "");
 
 
@@ -142,7 +145,7 @@ namespace MovePics
 
         { 
             RenameAll(args);
-            var folder = @"D:\OneDrive\Pictures";
+            
             DirectoryInfo d = new DirectoryInfo(folder);//Assuming Test is your Folder
 
             List<FileInfo> files = new List<FileInfo>();
