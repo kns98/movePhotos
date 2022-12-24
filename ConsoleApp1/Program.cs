@@ -15,7 +15,7 @@ namespace MovePics
     
     class Program
     {
-        static readonly string folder = @"D:\OneDrive\Pictures\\by_date";
+        static readonly string folder = @"D:\\OneDrive\\Pictures\\by_date";
 
         static void RunPass(List<FileInfo> files, string prefix)
         {
